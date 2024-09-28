@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+aside{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 70px;
+    background: #0C0C0C;
+    border-right: 1px solid #ffff;
+    position: fixed;
+    left: 0;
+}
+
+aside svg{
+    width: 30px;
+}
+
+.aomai-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background: #F0F0F0;
+}
+
+.tabela {
+    width: 100%;
+    margin-left: 70px;
+    padding-left: 50px;
+    background: #0c0c0c;
+    min-height: 100vh;
+}
+
+.aomai-dropdown {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #0C0C0C !important;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+body{
+    background-color: #0C0C0C!important;
+}
+
+.aomai-dropdown h1 {
+    color: #fff;
+    font-weight: 700;
+}
+
+.form-select {
+    background: linear-gradient(149deg, #FFC700 18.95%, #970 141.54%)!important;
+    color: #fff!important;
+    font-size: 20px!important;
+    font-weight: bold!important;
+    width: fit-content !important;
+    border: none!important;
+}
+
+option {
+    color: #0c0c0c;
+}
+
+
+.aomai-svg path {
+    rotate: 270deg;
+    transform: translateX(-150px) scale(.5) translateY(45px);
+    animation: aomaiPisca infinite .3s;
+}
+
+
+/* @keyframes aomaiPisca {
+
+    0% {
+        stroke: red;
+    }
+
+    50% {
+        stroke: rgb(68, 0, 194);
+    }
+
+    100% {
+        stroke: green;
+    }
+    
+} */
