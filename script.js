@@ -53,7 +53,7 @@ fetch('https://special-agreement-447fb99dc0.strapiapp.com/api/treinos?populate=*
                   newEmployees.splice(existingEmpIndex, 1);
                 }
                 // Adiciona o empregado novo
-                newEmployees.push({
+                newEmployees.unshift({
                   employee_id: localEmp.employee_id,
                   name: localEmp.name,
                   department: localEmp.department,
@@ -85,15 +85,18 @@ function populateTable(employees) {
   employees.forEach(emp => {
     const row = document.createElement('tr');
     row.innerHTML = `
-      <th scope="row">${emp.employee_id}</th>
-      <td>${emp.name}</td>
-      <td>${emp.signature ? '<img src="check.svg" alt="">' : '<img src="x.svg" alt="">'}</td>
-      <td>${emp.department}</td>
-      <td>${emp.createdAt || ''}</td>
-      <td>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="100%" heigth="100%" class="aomai-svg">
-          <path d="${emp.signature || ''}" stroke="#fff"/>
+      <th scope="row" class="align-middle">${emp.employee_id}</th>
+      <td class="align-middle">${emp.name}</td>
+      <td class="align-middle">${emp.signature ? '<img src="check.svg" alt="">' : '<img src="x.svg" alt="">'}</td>
+      <td class="align-middle">${emp.department}</td>
+      <td class="align-middle">${emp.createdAt || ''}</td>
+      <td class="align-middle">
+      ${emp.signature ? `
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="100%" height="100%" class="aomai-svg">
+            <path d="${emp.signature}" stroke="#fff"/>
         </svg>
+    ` : ''}
+        
       </td>
     `;
     tableBody.appendChild(row);

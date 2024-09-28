@@ -38,6 +38,11 @@ aside svg{
     min-height: 100vh;
 }
 
+.aomai-table {
+    width: 98%;
+    border-collapse: collapse;
+}
+
 .aomai-dropdown {
     padding-top: 50px;
     padding-bottom: 50px;
